@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.22)
 project (yaml C)
 
 set (YAML_VERSION_MAJOR 0)
