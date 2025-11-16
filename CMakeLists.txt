@@ -1,5 +1,5 @@
 
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.22)
 project (yaml C)
 
 set (YAML_VERSION_MAJOR 0)
@@ -99,7 +99,8 @@ install(
 # Add tests
 #
 include(CTest) # This module defines BUILD_TESTING option
-if(BUILD_TESTING)
+option(LIBYAML_BUILD_TESTING "Build libyaml test executables" ${BUILD_TESTING})
+if(LIBYAML_BUILD_TESTING)
   add_subdirectory(tests)
 endif()
 
